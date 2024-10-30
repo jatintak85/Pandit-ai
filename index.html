@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Palm Reader</title>
+  <link rel="stylesheet" href="panditai.css">
+    <!-- Include TensorFlow.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+
+</head>
+<body>
+  <h1 id="heading">Pandit-ai</h1>
+  <p> wait for few seconds after uploading image .check when percentage comes then click on predict .  currently<br>model is in training mode . thank you .  </p>
+  <input type="file" id="imageUpload" accept="image/*">
+  <div id="predictionResult"></div>
+  
+
+
+
+  <!-- Link to script.js -->
+  <script src="panditai.js"></script>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palm Reading Result</title>
+</head>
+<body>
+    <button id="getResult">predict</button>
+    <div id="outputMessage"></div>
+
+    <script id="box">
+        // Simulate getting a classification result
+        document.getElementById("getResult").addEventListener("click", function() {
+            const classificationResult = getRandomClass(); // This simulates a random classification result
+            displayMessage(classificationResult);
+        });
+
+        // Function to simulate getting a random class (for testing)
+        function getRandomClass() {
+            const classes = ["class1", "class2", "class3", "class4", "class5", 
+                             "class6", "class7", "class8", "class9", "class10"];
+            return classes[Math.floor(Math.random() * classes.length)];
+        }
+
+        // Function to display specific text based on classification result
+        function displayMessage(classificationResult) { 
+            let message;
+
+            switch (classificationResult) {
+                case "class1":
+                    message = "Your heartline indicating that you may have a reserved nature when it comes to expressing your emotions ,and you may have less interest in romance. your headline indicating that  you possess a balanced approach to thinking, blending both creativity and practicality , also Your imaginative ideas and creative flair bring a vibrant energy to every project. your lifeline  you lead a stable life and are likely to have a healthy lifestyle, though you may prefer to keep things straightforward and uncomplicated. fateline indicates that you are prone to many changes in life from external forces . suggestion - 'Om Gan Gana pataye Namo Namah' recite it daily at least three times  .";
+                    break;
+                case "class2":
+                    message = "Your heartline reflects a deep capacity for love and a strong emotional connection to those around you. This suggests that you value relationships and are often seen as compassionate and understanding. content with love life. passionate and emotionally expressive nature. The  headline indicates that you possess a balanced approach to thinking, allowing you to combine logical reasoning with a hint of creativity. practical and realistic mindset. lifeline signifies that while you enjoy a generally stable life, you may experience some fluctuations in health or personal circumstances. Embrace these changes, as they contribute to your growth and resilience. fateline indicate a more fluid and adaptable approach to career choices. suggestion - takeout some time and do kirtan of your favourite/ista god .";
+                    break;
+                case "class3":
+                    message = "Your heartline suggests that you may have experienced emotional setbacks or challenges in your relationships, indicating a need for healing and self-discovery. signify significant emotional events or changes. headline indicates that you might prefer practical and immediate solutions over complex reasoning, which can lead to a straightforward approach in life. more intuitive or imaginative approach to problem-solving. The lifeline shows that you possess an adaptable nature, thriving in dynamic environments and embracing change. This combination reflects a journey of personal growth, encouraging you to learn from past experiences while remaining open to new possibilities. healthy,vitality and overall well-being. your fate line suggests that your life path may be subtle and not strictly defined, indicating a journey filled with flexibility and adaptability. suggestion do 'shri ram jay ram jay jay ram' jap /recitation on regular basis.";
+                    break;
+                case "class4":
+                    message = "Your heartline signifies a strong capacity for love and emotional expression, indicating that you are open-hearted and likely to form deep connections with others. indicates restlessness. headline suggests a balanced and logical thought process, allowing you to approach challenges with clarity and practicality. you thinks realistically. The lifeline, reflects a stable life journey with a touch of adaptability, showing that you can navigate changes gracefully. Meanwhile, your fate line indicates that while your life path may be subtle, it is steady, suggesting you are capable of forging your own destiny while remaining open to the opportunities that come your way. support offered by family and friends. suggestion - lord radhakrishna , and krishna's later incarnations like  lord khatushyamji will help you to achieve your goals and love.";
+                    break;
+                case "class5":
+                    message = "Your heartline indicates a deep emotional capacity and a strong desire for meaningful connections, showing that you value relationships and are often compassionate. Emotionally expressive. high chance of success in preferred carrer choice. your headline reflects a flexible and open-minded approach to thinking, suggesting you have a creative outlook balanced by practicality. realistic and rational approach. lifeline, you have an adaptable nature, able to handle life’s changes with resilience and optimism. fate line reveals a clear life direction, indicating that while you remain open to new experiences, you likely have a steady sense of purpose guiding your path. suggestion- do donation and charity as much your conscience and pocket agree . donating keeping lord visnu in mind will help you .";
+                    break;
+                case "class6":
+                    message = "your heart and head lines, show a strong alignment between your emotions and thoughts, indicating that you’re balanced in both logic and empathy. You’re likely grounded and considerate in your decision-making, keeping both mind and heart in sync. good handle on emotions. mature, has a stable approach to relationships, and is able to control their emotional outbursts. lifeline suggests vitality and an active lifestyle, showing that you draw energy from within and may be close to family or familiar surroundings. strength, and enthusiasm. fate line points to a flexible life path, one where you might explore various opportunities rather than following a single, rigid direction. This combination suggests you’re adaptable, thriving in diverse experiences, and capable of charting your unique journey. suggestion - keep your lifestyle stable and strong on your principles, include celibacy , meditation , yoga , good healthy food , as much possible . stay away from alcohol etc. as much as possible .";
+                    break;
+                case "class7":
+                    message = "Your heartline reflects a deep emotional capacity and a strong desire for love and connection, suggesting that you are open to forming meaningful relationships. The headline indicates that you may have experienced significant shifts in your thought process, possibly due to life’s challenges, which can lead to personal growth and resilience. A curved lifeline signifies a nurturing nature, suggesting that you embrace change and adapt well to life's twists and turns. you will experience inconsistencies in thought. Meanwhile, the fate line that indicates a subtle and evolving life path, suggesting that while you may have a flexible approach to your destiny, you possess the potential to create significant impact in your chosen direction. suggestion - if you do not have any spritual guru/guide which helps you in every situation of your life then look for it .  best is to make lord hanumanji your guru/guide . just connect a guru-shishya/ teacher-student relation with hanumanji, he will be always there to show path whatever the situation .";
+                    break;
+                case "class8":
+                    message = "Your heartline, indicates a profound emotional depth and a strong ability to connect with others, suggesting that you are open-hearted and value meaningful relationships. your head and lifeline suggests a distinct separation between your emotional and practical aspects, indicating that you may prioritize logic and reason in your decision-making while keeping your emotions somewhat separate. adventure, enthusiasm for life. lifeline reflects adaptability and resilience, showing that you are capable of navigating changes in life with grace. fate line indicates a subtle yet evolving life path, suggesting that your journey may be flexible and open to new experiences, allowing you to explore various avenues in pursuit of your goals. suggestion- do not allow money, lust, anger, vanity, greed, to become heavy on you and destroy your life .";
+                    break;
+                case "class9":
+                    message = "Your heartline suggests that you experience emotions in a fluid and dynamic way, reflecting a capacity for deep feelings but also a tendency to encounter ups and downs in relationships. This may indicate a rich emotional life, filled with various experiences and connections. many relationships and lovers, absence of serious relationships. The headline signifies a logical and analytical approach to thinking, showing that you prioritize reason and clarity in your decision-making process. A lifeline indicates significant changes or disruptions in your life journey, suggesting that you may have faced challenges that have shaped your path. sudden change in lifestyle. The fate line implies a gentle, evolving life path, indicating that while you have direction, your journey is marked by flexibility and openness to new opportunities. suggestion- make such friends which show you real path , which tell you turth about yourself. recite hanuman chalisa on daily basis.";
+                    break;
+                case "class10":
+                    message = "Your heartline indicates a warm and emotional nature, suggesting that you are sensitive and deeply connected to your feelings and those of others. This reflects an ability to nurture relationships and express love with ease. headline points to shifts or disruptions in your thought process, indicating that you may have experienced significant life events that have influenced your perspective and decision-making. inconsistencies in thought. lifeline suggests adaptability and a willingness to embrace life's changes, reflecting your resilience in navigating various situations. Meanwhile, fate line signifies a subtle and evolving life path, indicating that while you may have a general direction in life, your journey is marked by flexibility and an openness to new possibilities. suggestion-daily do surya arghya. have healthy food. do meditation or hanuman chalisa for strengthening focus.";
+                    break;
+                default:
+                    message = "No specific condition met.";
+                    break;
+            }
+
+            // Display the message on the webpage
+            document.getElementById("outputMessage").innerText = message;
+        }
+
+        
+    </script>
+    
+</body>
+</html>
+
+</body>
+</html>
